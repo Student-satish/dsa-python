@@ -31,3 +31,29 @@ class Solution:
                 ans += str(1);
                 carry = 1;
         return ans[::-1];
+
+
+
+
+# optimized approach
+
+
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        n , m = len(a) , len(b);
+        i , j = n - 1 , m - 1;
+        carry = 0;
+        ans = ""
+        while i >= 0 or j >= 0 or carry == 1:
+            if(i >= 0):
+                carry += int(a[i]);
+                i -= 1;
+
+            if(j >= 0):
+                carry += int(b[j]);
+                j -= 1;
+            
+            ans += str(carry % 2);
+            carry = carry // 2;
+
+        return ans[::-1];
