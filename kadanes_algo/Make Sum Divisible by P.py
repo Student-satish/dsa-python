@@ -6,6 +6,8 @@
 
 # here we keep track the remainders of the prefixSum 
 
+# if running remainder - totSum % p exists previsously then it indicates then the requried subarray exists
+
 
 
 class Solution:

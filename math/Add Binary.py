@@ -1,3 +1,27 @@
+# you have given two binary strings a and b find the sum of these two binary strings and return sum as a binary string
+
+
+# we will add two binary strings from right to left 
+
+
+# sum is even append 0 to ans
+# sum is odd append 1 to ans
+
+# sum = sum // 2 as carry
+
+# every pair of ones will give one carry
+
+
+
+
+
+
+
+
+
+
+
+
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
         m,n = len(a),len(b);
