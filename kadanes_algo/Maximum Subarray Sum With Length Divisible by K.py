@@ -3,6 +3,22 @@ class Solution:
         n = len(nums);
         prefixSum = [0];
         for i in range(n):
+            prefixSum.append(prefixSum[-1]+nums[i]);
+        
+        maxSubSum = float('-inf');
+        for i in range(n-k+1):
+            for j in range(i+k,n+1,k):
+                maxSubSum = max(maxSubSum,prefixSum[j]-prefixSum[i]);
+        
+
+        return maxSubSum;
+
+        
+class Solution:
+    def maxSubarraySum(self, nums: List[int], k: int) -> int:
+        n = len(nums);
+        prefixSum = [0];
+        for i in range(n):
             prefixSum.append(nums[i] + prefixSum[-1]);
         
         maxSubSum = prefixSum[k];
